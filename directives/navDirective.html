@@ -8,12 +8,12 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#"><img class="brand-image" src="http://glamsel.com/wp-content/uploads/2012/12/2.gif" alt="SareeSwap" height="50" width="50" /></a>
+      <a class="navbar-brand" href="#">Saree Swap</a>
     </div>
     <div class="navbar-collapse" ng-class="isCollapsed ? 'collapse' : 'in'">
       <ul class="nav navbar-nav">
-        <li ng-class="getClass('/landing')" class=""><a href="#/landing">Home</a></li>
-        <li ng-class="getClass('/browse')" class=""><a href="#/browse">Borrow</a></li>
+        <li ng-show="home || borrower" ng-class="getClass('/browse')" class=""><a href="#/browse">Borrow</a></li>
+        <li ng-show="home || lender" ng-class="getClass('/inventory')" class=""><a href="#/inventory">Lend</a></li>
         <li role="separator" class="divider"></li>
         <li ng-show="borrower" ng-class="getClass('/view_orders')" class=""><a href="#/view_orders">Orders</a></li>
         <li ng-show="lender" ng-class="getClass('/view_requests')" class=""><a href="#/view_requests">Requests</a></li>
