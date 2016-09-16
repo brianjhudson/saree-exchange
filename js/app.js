@@ -3,7 +3,9 @@ angular.module("sareeApp", ["ui.router"])
         $stateProvider
             .state('home',{
                 url:'/',
-                templateUrl: "../views/home/homeTempl.html"
+                templateUrl: "../views/home/homeTempl.html",
+                controller: "homeCtrl"
+
             })
             .state('adventurers',{
                 url:'/adventurers',
