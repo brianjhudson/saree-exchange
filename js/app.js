@@ -12,22 +12,20 @@ angular.module("sareeApp", ["ui.router"])
                 templateUrl: "../views/landing/landingTempl.html",
                 controller: "landingCtrl"
             })
-            .state('contact',{
-                url:'/contact',
-                parent:'home',
-                templateUrl: "../views/contact.html"
+            .state('browse',{
+                url:'/browse',
+                templateUrl: "../views/borrower/browse.html",
+                controller: "borrowerCtrl"
             })
-            .state('packages',{
-                url:'/packages',
-                templateUrl: "../views/packages.html",
-                controller: 'mainCtrl',
-                controllerAs: 'vm'
+            .state('item_info',{
+                url:'/item_info/:item_id',
+                templateUrl: "../views/borrower/item_info.html",
+                controller: 'borrowerCtrl',
             })
-            .state('booked',{
-                url:'/booked/:id',
-                templateUrl: "../views/booked.html",
-                controller: 'bookedCtrl',
-                controllerAs: 'vm'
+            .state('order',{
+                url:'/order/:item_id',
+                templateUrl: "../views/borrower/order.html",
+                controller: 'borrowerCtrl'
             })
             .state('locations',{
                 url:'/locations',
