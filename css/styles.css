@@ -12,23 +12,21 @@
   padding: 0 10px;
 }
 .my-nav .navbar-nav > .active{
-  background: transparent;
 }
 .my-nav .navbar-nav > .active > a,
 .my-nav .navbar-nav > .active > a:hover,
 .my-nav .navbar-nav > .active > a:focus {
-  background: transparent;
-  border-bottom: 1px solid lightblue;
 
 }
 .login-container {
   display: flex;
-  height: 98vh;
+  height: 92vh;
   padding: 0;
   justify-content: center;
   align-items: center;
   background: url(../images/login-background.jpg) center center no-repeat;
   background-size: cover;
+  color: hsl(0, 0%, 80%);
 }
 .well-header {
   position: relative;
@@ -37,13 +35,17 @@
   position: absolute;
   top: -15px;
   right: -5px;
+  color: hsla(360, 80%, 40%, 0.5);
+}
+.well-header a:hover {
+  color: hsl(360, 80%, 40%);
 }
 .well-body {
   margin: 40px 0;
 }
 .login-well {
   text-align: center;
-  background-color: hsla(0, 0%, 60%, 0.75);
+  background-color: hsla(0, 0%, 20%, 0.75);
   border: none;
 }
 .login-well footer {
