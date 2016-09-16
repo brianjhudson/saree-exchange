@@ -7,10 +7,10 @@ angular.module("sareeApp", ["ui.router"])
                 controller: "homeCtrl"
 
             })
-            .state('adventurers',{
-                url:'/adventurers',
-                parent:'home',
-                templateUrl: "../views/about-adventurers.html"
+            .state('landing',{
+                url:'/landing',
+                templateUrl: "../views/landing/landingTempl.html",
+                controller: "landingCtrl"
             })
             .state('contact',{
                 url:'/contact',
