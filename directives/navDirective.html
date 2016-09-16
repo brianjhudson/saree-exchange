@@ -12,10 +12,15 @@
     </div>
     <div class="navbar-collapse" ng-class="isCollapsed ? 'collapse' : 'in'">
       <ul class="nav navbar-nav">
-        <li ng-show="home || borrower" ng-click="setBorrowStatus()" ng-class="getClass('/browse')" class=""><a href="#/browse">Borrow</a></li>
-        <li ng-show="home || lender" ng-click="setLendStatus()" ng-class="getClass('/inventory')" class=""><a href="#/inventory">Lend</a></li>
-        <li role="separator" class="divider"></li>
+        <!--Home Navbar  -->
+        <li ng-show="home" ng-click="setBorrowStatus()" ng-class="getClass('/browse')" class=""><a href="#/browse">Borrow</a></li>
+        <li ng-show="home" ng-click="setLendStatus()" ng-class="getClass('/inventory')" class=""><a href="#/inventory">Lend</a></li>
+        <!--Borrower Navbar  -->
+        <li ng-show="borrower" ng-click="setBorrowStatus()" ng-class="getClass('/browse')" class=""><a href="#/browse">Browse</a></li>
+          <!-- If you have time, insert men's, women's, children's categories -->
         <li ng-show="borrower" ng-class="getClass('/view_orders')" class=""><a href="#/view_orders">Orders</a></li>
+        <!--Lender Navbar  -->
+        <li ng-show="lender" ng-click="setLendStatus()" ng-class="getClass('/inventory')" class=""><a href="#/inventory">Inventory</a></li>
         <li ng-show="lender" ng-class="getClass('/view_requests')" class=""><a href="#/view_requests">Requests</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
