@@ -15,6 +15,22 @@ angular.module('sareeApp').directive('navDirective', function($location){
           $scope.$on('$routeChangeSuccess',function () {
             $scope.isCollapsed = true;
           });
+          // Condense this code if possible later
+          $scope.setHomeStatus = function() {
+            $scope.home = true;
+            $scope.borrower = false;
+            $scope.lender = false;
+          }
+          $scope.setBorrowStatus = function() {
+            $scope.home = false;
+            $scope.borrower = true;
+            $scope.lender = false;
+          }
+          $scope.setLendStatus = function() {
+            $scope.home = false;
+            $scope.borrower = false;
+            $scope.lender = true;
+          }
           $scope.getClass = function (path) {
               if(path === '/') {
                   if($location.path() === '/') {
