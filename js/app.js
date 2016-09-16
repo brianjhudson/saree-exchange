@@ -5,7 +5,11 @@ angular.module("sareeApp", ["ui.router"])
                 url:'/',
                 templateUrl: "../views/home/homeTempl.html",
                 controller: "homeCtrl"
-
+            })
+            .state('login',{
+                url:'/login',
+                templateUrl: "../views/login/login.html",
+                controller: "mainCtrl"
             })
             .state('landing',{
                 url:'/landing',

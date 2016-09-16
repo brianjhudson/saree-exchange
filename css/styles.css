@@ -1,3 +1,51 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.container-fluid {
+  padding: 0;
+}
+.my-nav {
+  margin: 0;
+  background-color: #fff;
+  padding: 0 10px;
+}
+.my-nav .navbar-nav > .active{
+  background: transparent;
+}
+.my-nav .navbar-nav > .active > a,
+.my-nav .navbar-nav > .active > a:hover,
+.my-nav .navbar-nav > .active > a:focus {
+  background: transparent;
+  border-bottom: 1px solid lightblue;
+
+}
+.login-container {
+  display: flex;
+  height: 98vh;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  background: url(../images/login-background.jpg) center center no-repeat;
+  background-size: cover;
+}
+.well-header {
+  position: relative;
+}
+.well-header a {
+  position: absolute;
+  top: -15px;
+  right: -5px;
+}
+.well-body {
+  margin: 40px 0;
+}
+.login-well {
+  text-align: center;
+  background-color: hsla(0, 0%, 60%, 0.75);
+  border: none;
+}
+.login-well footer {
+  text-align: right;
 }
