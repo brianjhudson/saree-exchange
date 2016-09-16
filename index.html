@@ -11,13 +11,20 @@
       <p>{{serviceTest}}</p>
     </div>
     <div>
-      <h4>View Tests</h4>
+      <h4>Borrower View Tests</h4>
       <p><a ui-sref="home">Home</a></p>
       <p><a ui-sref="landing">Landing</a></p>
       <p><a ui-sref="browse">Browse</a></p>
-      <p><a ui-sref="item_info">Item Info</a></p>
+      <p><a ui-sref="borrower_item_info">Item Info</a></p>
       <p><a ui-sref="order">Order</a></p>
-
+    </div>
+    <div>
+      <h4>Lender View Tests</h4>
+      <p><a ui-sref="inventory">Inventory</a></p>
+      <p><a ui-sref="add_item">Add Item</a></p>
+      <p><a ui-sref="lender_item_info">Item Info</a></p>
+      <p><a ui-sref="ship_item">Ship Item</a></p>
+      <p><a ui-sref="view_requests">View Requests</a></p>
     </div>
     <ui-view></ui-view>
 
@@ -32,5 +39,8 @@
     <script src="views/landing/landingCtrl.js" charset="utf-8"></script>
     <script src="views/borrower/borrowerCtrl.js" charset="utf-8"></script>
     <script src="views/borrower/borrowerService.js" charset="utf-8"></script>
+    <script src="views/lender/lenderCtrl.js" charset="utf-8"></script>
+    <script src="views/lender/lenderService.js" charset="utf-8"></script>
+
   </body>
 </html>

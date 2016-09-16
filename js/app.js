@@ -17,8 +17,8 @@ angular.module("sareeApp", ["ui.router"])
                 templateUrl: "../views/borrower/browse.html",
                 controller: "borrowerCtrl"
             })
-            .state('item_info',{
-                url:'/item_info/:item_id',
+            .state('borrower_item_info',{
+                url:'/borrower_item_info/:item_id',
                 templateUrl: "../views/borrower/item_info.html",
                 controller: 'borrowerCtrl',
             })
@@ -27,13 +27,31 @@ angular.module("sareeApp", ["ui.router"])
                 templateUrl: "../views/borrower/order.html",
                 controller: 'borrowerCtrl'
             })
-            .state('locations',{
-                url:'/locations',
-                templateUrl: "../views/locations.html",
-                controller: 'locationsCtrl',
-                controllerAs: 'vm'
+            .state('inventory',{
+                url:'/inventory',
+                templateUrl: "../views/lender/inventory.html",
+                controller: 'lenderCtrl'
+            })
+            .state('add_item',{
+                url:'/add_item',
+                templateUrl: "../views/lender/add_item.html",
+                controller: 'lenderCtrl'
+            })
+            .state('lender_item_info',{
+                url:'/lender_item_info',
+                templateUrl: "../views/lender/item_info.html",
+                controller: 'lenderCtrl'
+            })
+            .state('ship_item',{
+                url:'/ship_item',
+                templateUrl: "../views/lender/ship_item.html",
+                controller: 'lenderCtrl'
+            })
+            .state('view_requests',{
+                url:'/view_requests',
+                templateUrl: "../views/lender/view_requests.html",
+                controller: 'lenderCtrl'
             });
-
         $urlRouterProvider
             .otherwise('/');
     });
