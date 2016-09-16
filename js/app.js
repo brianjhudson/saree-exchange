@@ -27,6 +27,11 @@ angular.module("sareeApp", ["ui.router"])
                 templateUrl: "../views/borrower/order.html",
                 controller: 'borrowerCtrl'
             })
+            .state('view_orders',{
+                url:'/view_orders',
+                templateUrl: "../views/borrower/view_orders.html",
+                controller: 'borrowerCtrl'
+            })
             .state('inventory',{
                 url:'/inventory',
                 templateUrl: "../views/lender/inventory.html",

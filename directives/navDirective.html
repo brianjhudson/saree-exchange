@@ -1,2 +1,27 @@
-<p>Nav Directive Test</p>
-<p>{{test}}</p>
+<nav class="navbar navbar-default">
+  <!--navigator.geolocation.getlocation, check that out later -->
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" ng-click="isCollapsed = !isCollapsed">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"><img class="brand-image" src="http://glamsel.com/wp-content/uploads/2012/12/2.gif" alt="SareeSwap" height="50" width="50" /></a>
+    </div>
+    <div class="navbar-collapse" ng-class="isCollapsed ? 'collapse' : 'in'">
+      <ul class="nav navbar-nav">
+        <li ng-class="getClass('/landing')" class=""><a href="#/landing">Home</a></li>
+        <li ng-class="getClass('/browse')" class=""><a href="#/browse">Borrow</a></li>
+        <li role="separator" class="divider"></li>
+        <li ng-show="borrower" ng-class="getClass('/view_orders')" class=""><a href="#/view_orders">Orders</a></li>
+        <li ng-show="lender" ng-class="getClass('/view_requests')" class=""><a href="#/view_requests">Requests</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li ng-show="!loggedIn" ng-class="getClass('/login')"><a href="/login">Login</a></li>
+        <li ng-show="loggedIn" ng-class="getClass('/logout')"><a href="/logout">Logout</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
