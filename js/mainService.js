@@ -1,16 +1,21 @@
-angular.module("sareeApp").service("mainService", function() {
+angular.module("sareeApp").service("mainService", function($http) {
   this.test = "Main Service Working";
-  this.homeSlides =
-    [
-      {
-        image: 'images/banner.png'
-      },
-      {
-        image: 'images/banner3.jpg'
-      },
-      {
-        image: 'images/banner2.png'
-      }
-    ];
-
+  this.getInventory = function() {
+    return $http.get("js/siteInventory.json").then(function(result) {
+      return result.data;
+    })
+  }
+  this.homeSlides = slides;
 });
+
+var slides = [
+  {
+    image: 'images/banner.png'
+  },
+  {
+    image: 'images/banner3.jpg'
+  },
+  {
+    image: 'images/banner2.png'
+  }
+];
