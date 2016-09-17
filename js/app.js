@@ -1,4 +1,4 @@
-angular.module("sareeApp", ["ui.router"])
+angular.module("sareeApp", ["ui.router", "ui.bootstrap"])
     .config(function ($stateProvider, $urlRouterProvider) {
         $stateProvider
             .state('home',{

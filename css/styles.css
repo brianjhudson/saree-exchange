@@ -3,15 +3,28 @@
   margin: 0;
   padding: 0;
 }
+body {
+  font-family: 'IM Fell French Canon', serif;
+}
+nav, button, a {
+  font-family: 'Julius Sans One', sans-serif;
+}
 .container-fluid {
   padding: 0;
+}
+.navbar-brand {
+  padding: 5px;
+}
+.logo-image {
+  height: 100%;
+  width: auto;
 }
 .my-nav {
   margin: 0;
   background-color: #fff;
   padding: 0 10px;
 }
-.my-nav .navbar-nav > .active{
+.my-nav .navbar-nav > .active {
 }
 .my-nav .navbar-nav > .active > a,
 .my-nav .navbar-nav > .active > a:hover,
