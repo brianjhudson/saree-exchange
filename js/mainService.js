@@ -10,12 +10,12 @@ angular.module("sareeApp").service("mainService", function($http) {
 
 var slides = [
   {
-    image: 'images/banner.png'
+    image: 'images/banner2.png'
   },
   {
     image: 'images/banner3.jpg'
   },
   {
-    image: 'images/banner2.png'
+    image: 'images/banner.png'
   }
 ];

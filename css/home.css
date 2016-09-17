@@ -4,3 +4,26 @@
 .browse-image {
   width: 100%;
 }
+/*.borrow-text {
+  border-right: 1px solid #eaeaea;
+}*/
+.more-info {
+  font-size: 1.25em;
+  text-align: justify;
+}
+h2 {
+  margin-top: 0;
+}
+h2 a {
+  color: hsl(0, 0%, 50%);
+}
+h2 a:hover {
+  color: #D24A43;
+  text-decoration: none;
+}
+.how-to {
+  margin: 40px 0;
+}
+.icon-next, .icon-prev {
+  color:
+}

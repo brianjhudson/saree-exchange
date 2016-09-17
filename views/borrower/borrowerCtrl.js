@@ -9,6 +9,11 @@ angular.module("sareeApp").controller("borrowerCtrl", function($scope, mainServi
       return;
     })
   }
+  $scope.selectedCategory = ['women','men', 'children'];
+  $scope.filterByCategory = function(item) {
+     return ($scope.selectedCategory.indexOf(item.category) !== -1);
+
+ };
   $scope.serviceTest = borrowerService.test;
   init();
 })
