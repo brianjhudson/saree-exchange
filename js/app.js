@@ -31,44 +31,72 @@ angular.module("sareeApp", ["ui.router", "ui.bootstrap"])
                 }
             })
             .state('borrower_item_info',{
-                url:'/borrower_item_info/:item_id',
+                url:'/borrower_item_info',
                 templateUrl: "../views/borrower/item_info.html",
                 controller: 'borrowerCtrl',
+                params: {
+                  itemId: null,
+                  userId: null
+                }
             })
             .state('order',{
-                url:'/order/:item_id',
+                url:'/order',
                 templateUrl: "../views/borrower/order.html",
-                controller: 'borrowerCtrl'
+                controller: 'borrowerCtrl',
+                params: {
+                  itemId: null,
+                  userId: null
+                }
             })
             .state('view_orders',{
                 url:'/view_orders',
                 templateUrl: "../views/borrower/view_orders.html",
-                controller: 'borrowerCtrl'
+                controller: 'borrowerCtrl',
+                params: {
+                  userId: null
+                }
             })
             .state('inventory',{
                 url:'/inventory',
                 templateUrl: "../views/lender/inventory.html",
-                controller: 'lenderCtrl'
+                controller: 'lenderCtrl',
+                params: {
+                  userId: null
+                }
             })
             .state('add_item',{
                 url:'/add_item',
                 templateUrl: "../views/lender/add_item.html",
-                controller: 'lenderCtrl'
+                controller: 'lenderCtrl',
+                params: {
+                  userId: null
+                }
             })
             .state('lender_item_info',{
                 url:'/lender_item_info',
                 templateUrl: "../views/lender/item_info.html",
-                controller: 'lenderCtrl'
+                controller: 'lenderCtrl',
+                params: {
+                  itemId: null,
+                  userId: null
+                }
             })
             .state('ship_item',{
                 url:'/ship_item',
                 templateUrl: "../views/lender/ship_item.html",
-                controller: 'lenderCtrl'
+                controller: 'lenderCtrl',
+                params: {
+                  itemId: null,
+                  userId: null
+                }
             })
             .state('view_requests',{
                 url:'/view_requests',
                 templateUrl: "../views/lender/view_requests.html",
-                controller: 'lenderCtrl'
+                controller: 'lenderCtrl',
+                params: {
+                  userId: null
+                }
             });
         $urlRouterProvider
             .otherwise('/');

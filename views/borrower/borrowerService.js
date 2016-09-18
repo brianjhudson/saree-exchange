@@ -1,3 +1,4 @@
+
 angular.module("sareeApp").service("borrowerService", function($http, $q) {
   this.getUser = function(userId) {
     var deferred = $q.defer();
@@ -24,5 +25,5 @@ angular.module("sareeApp").service("borrowerService", function($http, $q) {
   this.getOrders = function(userId) {
     return this.user.orders;
   }
-  };
-);
+
+});

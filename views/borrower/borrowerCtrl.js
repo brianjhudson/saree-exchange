@@ -12,7 +12,7 @@ angular.module("sareeApp").controller("borrowerCtrl", function($scope, mainServi
     mainService.getInventory().then(function(result) {
       console.log(result);
       $scope.inventory = result;
-    })
+    });
   }
   function getUserInfo() {
     borrowerService.getUserInfo(userId).then(function(result) {
@@ -29,7 +29,7 @@ angular.module("sareeApp").controller("borrowerCtrl", function($scope, mainServi
     borrowerService.getOrders(userId).then(function(result) {
       console.log(result)
       $scope.orders = result;
-    })
+    });
   }
   init();
-})
+});

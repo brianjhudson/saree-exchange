@@ -8,12 +8,13 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#" ng-click=setHomeStatus()><img class="logo-image" src="../images/logo.png" alt="Saree Swap"><span class="sr-only">Saree Swap</span></a>
+      <a class="navbar-brand" ui-sref="home(userId)" ng-click=setHomeStatus()><img class="logo-image" src="../images/logo.png" alt="Saree Swap"><span class="sr-only">Saree Swap</span></a>
     </div>
+
     <div class="navbar-collapse" ng-class="isCollapsed ? 'collapse' : 'in'">
       <ul class="nav navbar-nav">
         <!--Home Navbar  -->
-        <li ng-show="home" ng-click="setBorrowStatus()" ng-class="getClass('/browse')" class=""><a href="#/browse">Borrow</a></li>
+        <li ng-show="home" ng-click="setBorrowStatus()" ng-class="getClass('/browse')" class=""><a ui-sref="browse(userId)">Borrow</a></li>
         <li ng-show="home" ng-click="setLendStatus()" ng-class="getClass('/inventory')" class=""><a href="#/inventory">Lend</a></li>
         <!--Borrower Navbar  -->
         <li ng-show="borrower" ng-click="setBorrowStatus()" ng-class="getClass('/browse')" class=""><a href="#/browse">Browse</a></li>
