@@ -4,7 +4,10 @@ angular.module("sareeApp", ["ui.router", "ui.bootstrap"])
             .state('home',{
                 url:'/',
                 templateUrl: "../views/home/homeTempl.html",
-                controller: "homeCtrl"
+                controller: "homeCtrl",
+                params: {
+                  userId: null
+                }
             })
             .state('login',{
                 url:'/login',
@@ -14,12 +17,18 @@ angular.module("sareeApp", ["ui.router", "ui.bootstrap"])
             .state('landing',{
                 url:'/landing',
                 templateUrl: "../views/landing/landingTempl.html",
-                controller: "landingCtrl"
+                controller: "landingCtrl",
+                params: {
+                  userId: null
+                }
             })
             .state('browse',{
                 url:'/browse',
                 templateUrl: "../views/borrower/browse.html",
-                controller: "borrowerCtrl"
+                controller: "borrowerCtrl",
+                params: {
+                  userId: null
+                }
             })
             .state('borrower_item_info',{
                 url:'/borrower_item_info/:item_id',

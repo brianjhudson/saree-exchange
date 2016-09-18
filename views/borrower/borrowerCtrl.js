@@ -1,19 +1,35 @@
-angular.module("sareeApp").controller("borrowerCtrl", function($scope, mainService, borrowerService) {
+angular.module("sareeApp").controller("borrowerCtrl", function($scope, mainService, borrowerService, $stateParams) {
   function init() {
     getInventory();
+    if ($stateParams.userId) {
+      var userId = $stateParams.userId;
+      getUserInfo();
+      getViewedItems();
+      getOrders();
+    }
   }
   function getInventory() {
     mainService.getInventory().then(function(result) {
       console.log(result);
       $scope.inventory = result;
-      return;
     })
   }
-  $scope.selectedCategory = ['women','men', 'children'];
-  $scope.filterByCategory = function(item) {
-     return ($scope.selectedCategory.indexOf(item.category) !== -1);
-
- };
-  $scope.serviceTest = borrowerService.test;
+  function getUserInfo() {
+    borrowerService.getUserInfo(userId).then(function(result) {
+        $scope.user = result;
+    });
+  }
+  function getViewedItems() {
+    borrowerService.getViewedItems(userId).then(function(result) {
+      console.log(result);
+      $scope.viewedItems = result;
+    });
+  }
+  function getOrders() {
+    borrowerService.getOrders(userId).then(function(result) {
+      console.log(result)
+      $scope.orders = result;
+    })
+  }
   init();
 })
