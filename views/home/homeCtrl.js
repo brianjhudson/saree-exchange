@@ -2,5 +2,7 @@ angular.module("sareeApp").controller("homeCtrl", function($scope, mainService, 
   $scope.myInterval = 3000;
   $scope.slides = mainService.homeSlides;
   $scope.signin = true;
-  if ($stateParams.userId) $scope.userId = $stateParams.userId;  
+  $scope.userId = mainService.userId;
+  console.log($scope.userId);
+
 })

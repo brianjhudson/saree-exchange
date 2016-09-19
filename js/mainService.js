@@ -29,11 +29,18 @@ angular.module("sareeApp").service("mainService", function($http) {
   }
   this.placeOrder = function(item, userId, order) {
     for (var i = 0; i < this.users.length; i++) {
-      if (users[i].id == userId) {
-        users[i].orders.push(newOrder);
-        console.log(users[i]);
+      if (this.users[i].id == userId) {
+        this.users[i].orders.push(order);
       }
     }
+  }
+  this.getOrders = function(userId) {
+    for (var i = 0; i < this.users.length; i++) {
+      if (this.users[i].id == userId) {
+        return this.users[i].orders;
+      }
+    }
+
   }
 });
 var slides = [

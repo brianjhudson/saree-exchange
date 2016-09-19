@@ -26,14 +26,6 @@ angular.module("sareeApp", ["ui.router", "ui.bootstrap"])
                 controller: "mainCtrl"
             })
 
-            .state('landing',{
-                url:'/landing',
-                templateUrl: "../views/landing/landingTempl.html",
-                controller: "landingCtrl",
-                params: {
-                  userId: null
-                }
-            })
             .state('browse',{
                 url:'/browse',
                 templateUrl: "../views/borrower/browse.html",
