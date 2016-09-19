@@ -15,8 +15,5 @@ angular.module("sareeApp").controller("itemInfoCtrl", function($scope, $state, $
       }
     }
   }
-  function orderItem(item) {
-    $state.go('order', {itemId: item.itemId, userId: $stateParams.userId});
-  }
 
 })

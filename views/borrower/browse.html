@@ -14,14 +14,7 @@
         </form>
       </header>
       <ui-view>
-        <div class="container">
-          <div class="col-sm-9">
-            <div ng-click="viewItem(item)" class="col-xs-4 col-sm-4 col-md-3 col-lg-2" ng-repeat="item in inventory | filter: filterObject | filter: searchTerm">
-              <img class="browse-image" ng-src="{{item.url}}" alt="{{item.description}}">
-              <p>{{item.description}}</p>
-            </div>
-          </div>
-        </div>
-    </ui-view>
+        <item-display-directive items="inventory"></item-display-directive>
+      </ui-view>
 
     </section>
