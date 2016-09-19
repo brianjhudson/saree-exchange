@@ -13,7 +13,7 @@ angular.module("sareeApp").controller("orderItemCtrl", function($scope, $state, 
     for (var i = 0; i < inventory.length; i++) {
       if (itemId == inventory[i].itemId) {
       $scope.item = inventory[i];
-      console.log($scope.item);
+
       }
     }
   }

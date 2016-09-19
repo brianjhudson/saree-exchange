@@ -1,6 +1,7 @@
 angular.module("sareeApp").service("mainService", function($http) {
   this.users = [];
   this.orders = [];
+  this.userId = null;
   this.getInventory = function() {
     return $http.get("js/siteInventory.json").then(function(result) {
       return result.data;

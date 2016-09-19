@@ -1,1 +1,15 @@
-<p>View orders Test</p>
+<carousel-directive class="browse-slides" slides="slides"></carousel-directive>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+      <div class="col-xs-4" ng-repeat="order in orders">
+        <img ng-src="{{order.item.url}}" alt="">
+      </div>
+      <div class="col-xs-4">
+        <h3>{{order.item.title}}</h3>
+        <h2><small>From {{order.item.lenderName}}</small></h2>
+        <h4>Ordered On: {{order.item.orderDate}}</h4>
+      </div>
+    </div>
+  </div>
+</div>

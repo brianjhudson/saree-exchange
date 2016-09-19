@@ -66,7 +66,7 @@ angular.module("sareeApp", ["ui.router", "ui.bootstrap"])
             .state('view_orders',{
                 url:'/view_orders',
                 templateUrl: "../views/borrower/view_orders.html",
-                controller: 'borrowerCtrl',
+                controller: 'viewOrdersCtrl',
                 params: {
                   userId: null
                 }

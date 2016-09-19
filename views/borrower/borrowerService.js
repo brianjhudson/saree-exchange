@@ -13,6 +13,7 @@ angular.module("sareeApp").service("borrowerService", function($http, $q, mainSe
       orderInfo: order
     };
     mainService.placeOrder(item ,userId, newOrder);
+    console.log(userId);
   }
 
 });
