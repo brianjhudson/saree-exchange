@@ -1,24 +1,40 @@
 angular.module("sareeApp").service("mainService", function($http) {
-
+  this.users = [];
+  this.orders = [];
   this.getInventory = function() {
     return $http.get("js/siteInventory.json").then(function(result) {
       return result.data;
     })
   }
   this.homeSlides = slides;
-
-  this.getUsers = function() {
-    if (localStorage[users]) {
-      this.users = JSON.parse(localStorage[users]);
-    }
-    else this.users = [];
-  }
+  // this.getUsers = function() {
+  //   if (localStorage[users]) {
+  //     this.users = JSON.parse(localStorage[users]);
+  //   }
+  //   else this.users = [];
+  // }
   this.createUser = function(user) {
-    this.users.push(user);
-
+    var newUser = {
+      id: this.users.length
+      , name: user.name
+      , email: user.email
+      , username: user.userName
+      , password: user.password
+      , orders: []
+    };
+    this.users.push(newUser);
+    localStorage[users] = JSON.stringify(this.users);
+    this.userId = newUser.id;
+  }
+  this.placeOrder = function(item, userId, order) {
+    for (var i = 0; i < this.users.length; i++) {
+      if (users[i].id == userId) {
+        users[i].orders.push(newOrder);
+        console.log(users[i]);
+      }
+    }
   }
 });
-
 var slides = [
   {
     index: 0,
@@ -33,3 +49,19 @@ var slides = [
     image: 'images/banner.png'
   }
 ];
+var users = [
+  {
+    id: 0
+    , name: "Brian Hudson"
+    , email: "brianh@gmail.com"
+    , username: "bj"
+    , password: "hello"
+  },
+  {
+    id: 1
+    , name: "Kavita S Joshi"
+    , email: "ksj@123.com"
+    , username: "kj"
+    , password: "bye"
+  }
+]
