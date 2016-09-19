@@ -1,5 +1,8 @@
-
 angular.module("sareeApp").service("borrowerService", function($http, $q) {
+  this.slides = borrowerSlides;
+  this.saveInventory = function(inventory) {
+    this.inventory = inventory;
+  }
   this.getUser = function(userId) {
     var deferred = $q.defer();
     if (this.viewedItems) {
@@ -25,5 +28,22 @@ angular.module("sareeApp").service("borrowerService", function($http, $q) {
   this.getOrders = function(userId) {
     return this.user.orders;
   }
+  this.placeOrder = function(item, userId, order) {
+    order[customer] = this.user.name;
+    order[item] = item;
+    // removeItemFromInventory(item);
+    // addToUsersOrder(item, userId, order);
+    // addToLendersRequests(order)
+    // lenderService.placeOrder(order);
+
+  }
 
 });
+var borrowerSlides = [
+  {
+  image: 'images/browse2.png'
+},
+{
+  image: 'images/browse3.png'
+},
+]

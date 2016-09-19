@@ -26,7 +26,8 @@
       </ul>
       <!--Login/Logout-->
       <ul class="nav navbar-nav navbar-right">
-        <li ng-show="!loggedIn" ng-class="getClass('/login')" class=""><a href="#/login">Login</a></li>
+        <li ng-show="!loggedIn" ng-class="getClass('/login')" class=""><a ui-sref="login.signin">Login</a></li>
+        <li ng-show="!loggedIn" ng-class="getClass('/login')" class=""><a ui-sref="login.signup">Sign Up</a></li>
         <li ng-show="loggedIn"><a href="#">Logout</a></li>
       </ul>
     </div>

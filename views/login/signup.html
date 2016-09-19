@@ -1,0 +1,18 @@
+<section class="well col-md-4 login-well" >
+  <header class="well-header">
+    <a role="button" ui-sref="landing"><span class="glyphicon glyphicon-remove"></span></a>
+    <h4 class="well-title">Welcome!</h4>
+    <h4><small>Create a user profile</small></h4>
+  </header>
+  <main class="well-body">
+    <form class="form-group" ng-submit="createUser(user)">
+      <input type="text" class="form-control" placeholder="Name" ng-model="user.name">
+      <input type="text" class="form-control" placeholder="Username" ng-model="user.userName">
+      <input type="password" class="form-control" placeholder="Password" ng-model="user.password">
+    </form>
+  </main>
+  <footer class="well-footer">
+    <button type="button" class="btn btn-primary" ng-click=createUser(user)>Sign Up!</button>
+  </footer>
+  </div>
+</section>

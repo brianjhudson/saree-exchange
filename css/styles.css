@@ -9,9 +9,6 @@ body {
 nav, button, a {
   font-family: 'Julius Sans One', sans-serif;
 }
-.container-fluid {
-  padding: 0;
-}
 .navbar-brand {
   padding: 5px;
 }
@@ -23,6 +20,7 @@ nav, button, a {
   margin: 0;
   background-color: #fff;
   padding: 0 10px;
+  border: none;
 }
 .my-nav .navbar-nav > .active {
 }
@@ -31,7 +29,7 @@ nav, button, a {
 .my-nav .navbar-nav > .active > a:focus {
 
 }
-.login-container {
+.login-container, .modal-container {
   display: flex;
   height: 92vh;
   padding: 0;

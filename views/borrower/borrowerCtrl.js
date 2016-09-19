@@ -1,6 +1,13 @@
-angular.module("sareeApp").controller("borrowerCtrl", function($scope, mainService, borrowerService, $stateParams) {
+angular.module("sareeApp").controller("borrowerCtrl", function($scope, mainService, borrowerService, $stateParams, $state) {
   function init() {
+    $scope.slides = borrowerService.slides;
     getInventory();
+    $scope.viewItem = viewItem;
+    $scope.modalShown = false;
+    $scope.returnToBrowse = function (){
+      $scope.selectedItem = {};
+      $scope.viewModal = !$scope.viewModal;
+    }
     if ($stateParams.userId) {
       var userId = $stateParams.userId;
       getUserInfo();
@@ -8,10 +15,11 @@ angular.module("sareeApp").controller("borrowerCtrl", function($scope, mainServi
       getOrders();
     }
   }
+
   function getInventory() {
     mainService.getInventory().then(function(result) {
-      console.log(result);
       $scope.inventory = result;
+      borrowerService.saveInventory($scope.inventory);
     });
   }
   function getUserInfo() {
@@ -31,5 +39,17 @@ angular.module("sareeApp").controller("borrowerCtrl", function($scope, mainServi
       $scope.orders = result;
     });
   }
+
+
+  function viewItem (item) {
+    $scope.selectedItem = item;
+    $state.go('browse.borrower_item_info', {itemId: item.itemId, userId: $stateParams.userId});
+  }
+
+  // function viewItem (item) {
+  //   $scope.selectedItem = item;
+  //   $scope.viewModal = !$scope.viewModal;
+  // };
+
   init();
 });

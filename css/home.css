@@ -1,5 +1,9 @@
 .carousel-control.right, .carousel-control.left {
   background-image: none;
+  
+}
+.carousel-indicators {
+  display: none;
 }
 .browse-image {
   width: 100%;
@@ -26,4 +30,44 @@ h2 a:hover {
 }
 .icon-next, .icon-prev {
   color:
+}
+.btn-primary {
+  background-color: #fff;
+  color: #D24A43;
+  border: 1px solid #644537;
+  border-radius: 5px;
+  margin-top: 20px;
+  width: 200px;
+}
+.btn-primary:hover {
+  background-color: #644537;
+  color: #fff;
+}
+.btn-primary:active {
+  background-color: #fff
+  color: #D24A43;
+}
+.browse-slides {
+  width: 100%;
+  height: auto;
+}
+.inner-window {
+  border: 1px solid #D24A43;
+  border-radius: 10px;
+}
+.browse-window {
+  margin-top: 20px;
+}
+.info-image {
+  width: 100%;
+}
+.info-image-container {
+  padding: 10px;
+}
+.form-control {
+  margin-top: 10px;
+}
+.expiration, .state, .zip, .security {
+  display: inline-block;
+  width: 45%;
 }

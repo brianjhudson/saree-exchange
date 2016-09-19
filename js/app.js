@@ -14,6 +14,18 @@ angular.module("sareeApp", ["ui.router", "ui.bootstrap"])
                 templateUrl: "../views/login/login.html",
                 controller: "mainCtrl"
             })
+            .state('login.signup', {
+                url:'/signup',
+                templateUrl: "../views/login/signup.html",
+                controller: "mainCtrl"
+            })
+
+            .state('login.signin', {
+                url:'/signin',
+                templateUrl: "../views/login/signin.html",
+                controller: "mainCtrl"
+            })
+
             .state('landing',{
                 url:'/landing',
                 templateUrl: "../views/landing/landingTempl.html",
@@ -30,24 +42,27 @@ angular.module("sareeApp", ["ui.router", "ui.bootstrap"])
                   userId: null
                 }
             })
-            .state('borrower_item_info',{
+            .state('browse.borrower_item_info',{
                 url:'/borrower_item_info',
                 templateUrl: "../views/borrower/item_info.html",
-                controller: 'borrowerCtrl',
-                params: {
+                controller: 'itemInfoCtrl',
+                params : {
                   itemId: null,
                   userId: null
                 }
+
             })
+
             .state('order',{
                 url:'/order',
                 templateUrl: "../views/borrower/order.html",
-                controller: 'borrowerCtrl',
+                controller: 'orderItemCtrl',
                 params: {
                   itemId: null,
                   userId: null
                 }
             })
+
             .state('view_orders',{
                 url:'/view_orders',
                 templateUrl: "../views/borrower/view_orders.html",

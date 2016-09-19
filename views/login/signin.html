@@ -1,0 +1,20 @@
+<section class="well col-md-4 login-well" >
+  <header class="well-header">
+    <a role="button" ui-sref="landing"><span class="glyphicon glyphicon-remove"></span></a>
+    <h4 class="well-title">Welcome Back!</h4>
+  </header>
+  <main class="well-body">
+    <form class="form-group" ng-submit="checkLogin(userName, password)">
+      <label for="#user-input" class="sr-only">Username: </label>
+      <input type="text" class="form-control" placeholder="Username"ng-model="userName">
+      <br>
+      <span class="hidden form-control-feedback-danger"></span>
+      <input type="password" class="form-control" placeholder="Password"ng-model="password">
+      <span class="hidden form-control-feedback-danger"></span>
+    </form>
+  </main>
+  <footer class="well-footer">
+    <button type="button" class="btn btn-default" ng-click=checkLogin(user)>Login</button>
+  </footer>
+  </div>
+</section>

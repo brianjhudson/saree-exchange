@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="css/home.css">
   </head>
   <body ng-controller="mainCtrl">
-    <nav-directive></nav-directive>
+
+    <nav-directive loggedIn="loggedIn" userId="userId"></nav-directive>
     <div class="container-fluid">
       <ui-view></ui-view>
     </div>
@@ -28,5 +29,9 @@
     <script src="views/lender/lenderService.js" charset="utf-8"></script>
     <script src="directives/navDirective.js" charset="utf-8"></script>
     <script src="directives/carouselDirective.js" charset="utf-8"></script>
+    <script src="views/borrower/itemInfoCtrl.js" charset="utf-8"></script>
+    <script src="views/borrower/orderItemCtrl.js" charset="utf-8"></script>
+
+
   </body>
 </html>
