@@ -38,6 +38,7 @@ angular.module("sareeApp").service("mainService", function($http) {
     for (var i = 0; i < this.users.length; i++) {
       if (this.users[i].id == userId) {
         return this.users[i].orders;
+        console.log(this.users[i].orders);
       }
     }
 

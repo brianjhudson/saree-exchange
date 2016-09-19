@@ -55,6 +55,7 @@ nav, button, a {
   margin: 40px 0;
 }
 .login-well {
+  width: 400px;
   text-align: center;
   background-color: hsla(0, 0%, 20%, 0.75);
   border: none;

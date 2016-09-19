@@ -7,10 +7,13 @@ angular.module("sareeApp").service("borrowerService", function($http, $q, mainSe
     return this.user.orders;
   }
   this.placeOrder = function(item, userId, order) {
+    var orderDate = new Date();
+    orderDate = orderDate.toString();
     var newOrder = {
       borrowerId: userId,
       item: item,
-      orderInfo: order
+      orderInfo: order,
+      orderDate: orderDate        
     };
     mainService.placeOrder(item ,userId, newOrder);
     console.log(userId);
