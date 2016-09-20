@@ -1,6 +1,7 @@
 angular.module("sareeApp").controller("borrowerCtrl", function($scope, mainService, borrowerService, $stateParams, $state) {
   function init() {
     $scope.slides = borrowerService.slides;
+    $scope.interval = 3000;
     $scope.userId = mainService.userId;
     console.log($scope.userId);
     getInventory();

@@ -4,8 +4,8 @@ angular.module("sareeApp").controller("orderItemCtrl", function($scope, $state, 
     $scope.placeOrder = placeOrder;
     if ($stateParams.userId) var userId = $stateParams.userId;
     $scope.userId = mainService.userId;
-    console.log($scope.userId);
     var itemId = $stateParams.itemId;
+    console.log(itemId);
     var inventory = borrowerService.inventory;
     getItem(itemId, inventory);
   }
@@ -15,6 +15,7 @@ angular.module("sareeApp").controller("orderItemCtrl", function($scope, $state, 
     for (var i = 0; i < inventory.length; i++) {
       if (itemId == inventory[i].itemId) {
       $scope.item = inventory[i];
+      console.log($scope.item);
 
       }
     }

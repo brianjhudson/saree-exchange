@@ -4,7 +4,8 @@ angular.module("sareeApp").directive("carouselDirective", function(){
     , replace: true
     , templateUrl: "../directives/carouselDirective.html"
     , scope: {
-      slides: "="
+        slides: "="
+      , interval: "="
     }
     , link: function(scope, elements, attributes) {
     }

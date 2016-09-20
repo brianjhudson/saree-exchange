@@ -1,4 +1,7 @@
 angular.module("sareeApp", ["ui.router", "ui.bootstrap"])
+    .run(function($rootScope) {
+      $rootScope.userId = null;
+    })
     .config(function ($stateProvider, $urlRouterProvider) {
         $stateProvider
             .state('home',{
