@@ -2,15 +2,13 @@ angular.module("sareeApp", ["ui.router", "ui.bootstrap"])
     .run(function($rootScope) {
       $rootScope.userId = null;
     })
+
     .config(function ($stateProvider, $urlRouterProvider) {
         $stateProvider
             .state('home',{
                 url:'/',
                 templateUrl: "../views/home/homeTempl.html",
                 controller: "homeCtrl",
-                params: {
-                  userId: null
-                }
             })
             .state('login',{
                 url:'/login',
@@ -33,9 +31,6 @@ angular.module("sareeApp", ["ui.router", "ui.bootstrap"])
                 url:'/browse',
                 templateUrl: "../views/borrower/browse.html",
                 controller: "borrowerCtrl",
-                params: {
-                  userId: null
-                }
             })
             .state('browse.borrower_item_info',{
                 url:'/borrower_item_info',
@@ -43,7 +38,6 @@ angular.module("sareeApp", ["ui.router", "ui.bootstrap"])
                 controller: 'itemInfoCtrl',
                 params : {
                   itemId: null,
-                  userId: null
                 }
 
             })
@@ -54,7 +48,6 @@ angular.module("sareeApp", ["ui.router", "ui.bootstrap"])
                 controller: 'orderItemCtrl',
                 params: {
                   itemId: null,
-                  userId: null
                 }
             })
 
@@ -62,25 +55,16 @@ angular.module("sareeApp", ["ui.router", "ui.bootstrap"])
                 url:'/view_orders',
                 templateUrl: "../views/borrower/view_orders.html",
                 controller: 'viewOrdersCtrl',
-                params: {
-                  userId: null
-                }
             })
             .state('inventory',{
                 url:'/inventory',
                 templateUrl: "../views/lender/inventory.html",
                 controller: 'lenderCtrl',
-                params: {
-                  userId: null
-                }
             })
             .state('add_item',{
                 url:'/add_item',
                 templateUrl: "../views/lender/add_item.html",
                 controller: 'lenderCtrl',
-                params: {
-                  userId: null
-                }
             })
             .state('lender_item_info',{
                 url:'/lender_item_info',
@@ -88,7 +72,6 @@ angular.module("sareeApp", ["ui.router", "ui.bootstrap"])
                 controller: 'lenderCtrl',
                 params: {
                   itemId: null,
-                  userId: null
                 }
             })
             .state('ship_item',{
@@ -97,16 +80,12 @@ angular.module("sareeApp", ["ui.router", "ui.bootstrap"])
                 controller: 'lenderCtrl',
                 params: {
                   itemId: null,
-                  userId: null
                 }
             })
             .state('view_requests',{
                 url:'/view_requests',
                 templateUrl: "../views/lender/view_requests.html",
                 controller: 'lenderCtrl',
-                params: {
-                  userId: null
-                }
             });
         $urlRouterProvider
             .otherwise('/');

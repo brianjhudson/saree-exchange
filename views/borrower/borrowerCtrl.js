@@ -1,30 +1,28 @@
-angular.module("sareeApp").controller("borrowerCtrl", function($scope, mainService, borrowerService, $stateParams, $state) {
+angular.module("sareeApp").controller("borrowerCtrl", function($scope, $state, $rootScope, mainService) {
   function init() {
-    $scope.slides = borrowerService.slides;
+    var userId = $rootScope.userId;
+    $scope.slides = mainService.borrowerSlides;
     $scope.interval = 3000;
-    $scope.userId = mainService.userId;
-    console.log($scope.userId);
-    getInventory();
     $scope.viewItem = viewItem;
-    $scope.modalShown = false;
-    $scope.returnToBrowse = function (){
-      $scope.selectedItem = {};
-      $scope.viewModal = !$scope.viewModal;
-    }
+    getInventory();
   }
 
   function getInventory() {
-    mainService.getInventory().then(function(result) {
-      $scope.inventory = result;
-      borrowerService.saveInventory($scope.inventory);
-    });
+    if (mainService.inventory) {
+      $scope.inventory = mainService.inventory;
+    }
+    else {
+      mainService.getInventory().then(function(result){
+        mainService.saveInventory(result);
+        $scope.inventory = result;
+      })
+    }
   }
 
   function viewItem (item) {
     $scope.selectedItem = item;
-    $state.go('browse.borrower_item_info', {itemId: item.itemId, userId: $scope.userId});
+    $state.go('browse.borrower_item_info', {itemId: item.itemId});
   }
-
 
   init();
 });

@@ -1,0 +1,119 @@
+[
+ {
+   "id": 1,
+   "firstName": "Aashika ",
+   "lastName": "Dave",
+   "email": "aashu@gmail.com",
+   "username": "aashu",
+   "password": "aashu",
+   "orders": "[]"
+ },
+ {
+   "id": 2,
+   "firstName": "Anil",
+   "lastName": "Patel",
+   "email": "anil@consultant.com",
+   "username": "anil4real",
+   "password": "anil4real",
+   "orders": "[]"
+ },
+ {
+   "id": 3,
+   "firstName": "Arav",
+   "lastName": "Hudson",
+   "email": "arav@gmail.com",
+   "username": "arav",
+   "password": "arav",
+   "orders": "[]"
+ },
+ {
+   "id": 4,
+   "firstName": "Brian",
+   "lastName": "Hudson",
+   "email": "brianjhudson@gmail.com",
+   "username": "brianjhudson",
+   "password": "brianjhudson",
+   "orders": "[]"
+ },
+ {
+   "id": 5,
+   "firstName": "Kavita",
+   "lastName": "Joshi",
+   "email": "ksj@gmail.com",
+   "username": "ksj",
+   "password": "ksj",
+   "orders": "[]"
+ },
+ {
+   "id": 6,
+   "firstName": "Helen",
+   "lastName": "Hudson",
+   "email": "helen@gmail.com",
+   "username": "helenjo",
+   "password": "helenjo",
+   "orders": "[]"
+ },
+ {
+   "id": 7,
+   "firstName": "Prasad",
+   "lastName": "Joshi",
+   "email": "prasad@gmail.com",
+   "username": "prasad",
+   "password": "prasad",
+   "orders": "[]"
+ },
+ {
+   "id": 8,
+   "firstName": "Subhash",
+   "lastName": "Joshi",
+   "email": "docjoshi@gmail.com",
+   "username": "docjoshi",
+   "password": "docjoshi",
+   "orders": "[]"
+ },
+ {
+   "id": 9,
+   "firstName": "Sushma",
+   "lastName": "Joshi",
+   "email": "supermom@gmail.com",
+   "username": "supermom",
+   "password": "supermom",
+   "orders": "[]"
+ },
+ {
+   "id": 10,
+   "firstName": "Sonali",
+   "lastName": "Joshi",
+   "email": "maushi@gmail.com",
+   "username": "maushi",
+   "password": "maushi",
+   "orders": "[]"
+ },
+ {
+   "id": 11,
+   "firstName": "Teja",
+   "lastName": "Patankar",
+   "email": "teja@gmail.com",
+   "username": "teja",
+   "password": "teja",
+   "orders": "[]"
+ },
+ {
+   "id": 12,
+   "firstName": "Rootvik",
+   "lastName": "Patel",
+   "email": "rooty@gmail.com",
+   "username": "rooty",
+   "password": "rooty",
+   "orders": "[]"
+ },
+ {
+   "id": 13,
+   "firstName": "Vikram",
+   "lastName": "Hudson",
+   "email": "vik@gmail.com",
+   "username": "vik",
+   "password": "vik",
+   "orders": "[]"
+ }
+]

@@ -1,6 +1,5 @@
-angular.module("sareeApp").controller("lenderCtrl", function($scope, lenderService) {
-  $scope.test = "Lender Control Is Working";
-  $scope.serviceTest = lenderService.test;
+angular.module("sareeApp").controller("lenderCtrl", function($scope, lenderService, $rootScope) {
+  var userId = $rootScope.userId;
   $scope.myInterval = 3000;
   $scope.slides = [
     {

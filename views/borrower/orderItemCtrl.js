@@ -1,28 +1,24 @@
-angular.module("sareeApp").controller("orderItemCtrl", function($scope, $state, $stateParams, borrowerService, mainService) {
+angular.module("sareeApp").controller("orderItemCtrl", function($scope, $state, $stateParams, $rootScope, mainService) {
   function init() {
-    $scope.slides = borrowerService.slides;
+    $scope.slides = mainService.borrowerSlides;
     $scope.placeOrder = placeOrder;
-    if ($stateParams.userId) var userId = $stateParams.userId;
-    $scope.userId = mainService.userId;
+    $scope.userId = $rootScope.userId;
     var itemId = $stateParams.itemId;
-    console.log(itemId);
-    var inventory = borrowerService.inventory;
-    getItem(itemId, inventory);
+    var inventory = mainService.inventory;
+    $scope.item = getItem(itemId, inventory);
   }
   init();
 
   function getItem(itemId, inventory) {
     for (var i = 0; i < inventory.length; i++) {
       if (itemId == inventory[i].itemId) {
-      $scope.item = inventory[i];
-      console.log($scope.item);
-
+        return inventory[i];
       }
     }
   }
   function placeOrder(item, order) {
-    borrowerService.placeOrder(item, $scope.userId, order);
-    $state.go('view_orders', {userId: $scope.userId});
+    mainService.placeOrder(item, order);
+    $state.go('view_orders');
   }
 
 })
