@@ -1,6 +1,6 @@
 angular.module("sareeApp").controller("itemInfoCtrl", function($scope, $state, $stateParams, borrowerService) {
   function init() {
-    $scope.orderItem = orderItem;
+    // $scope.orderItem = orderItem;
     if ($stateParams.userId) var userId = $stateParams.userId;
     var itemId = $stateParams.itemId;
     var inventory = borrowerService.inventory;
