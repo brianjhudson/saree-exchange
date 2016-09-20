@@ -75,3 +75,6 @@ h2 a:hover {
   width: 100%;
   height: auto;
 }
+section {
+  margin-bottom: 100px;
+}
