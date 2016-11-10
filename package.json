@@ -4,8 +4,7 @@
   "description": "This project is a portfolio project which allows lenders to post sarees for rent/lending and borrowers to view and request these sarees.",
   "main": "index.js",
   "scripts": {
-    "start": "index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "index.js"  
   },
   "engines": {
     "node": "6.6.0"
