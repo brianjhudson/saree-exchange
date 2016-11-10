@@ -10,7 +10,7 @@ angular.module("sareeApp").service("mainService", function($http, $rootScope, $q
   this.placeOrder = placeOrder;
   this.borrowerSlides = borrowerSlides;
   this.checkLogin = checkLogin;
-  this.generateLenderInventory = generateLenderInventory;
+  
 
   function getUsers() {
     // var deferred = $q.defer();

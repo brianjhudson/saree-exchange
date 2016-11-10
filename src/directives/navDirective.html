@@ -14,6 +14,7 @@
     <div class="navbar-collapse" ng-class="isCollapsed ? 'collapse' : 'in'">
       <ul class="nav navbar-nav">
         <!--Home Navbar  -->
+
         <li ng-show="home" ng-click="setBorrowStatus()" ng-class="getClass('/browse')" class=""><a ui-sref="browse(userId)">Borrow</a></li>
         <li ng-show="home" ng-click="setLendStatus()" ng-class="getClass('/inventory')" class=""><a href="#/inventory">Lend</a></li>
         <!--Borrower Navbar  -->

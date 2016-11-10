@@ -1,0 +1,26 @@
+{
+  "name": "saree-exchange",
+  "version": "1.0.0",
+  "description": "This project is a portfolio project which allows lenders to post sarees for rent/lending and borrowers to view and request these sarees.",
+  "main": "index.js",
+  "scripts": {
+    "start": "index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": "6.6.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brianjhudson/saree-exchange.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brianjhudson/saree-exchange/issues"
+  },
+  "homepage": "https://github.com/brianjhudson/saree-exchange#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
