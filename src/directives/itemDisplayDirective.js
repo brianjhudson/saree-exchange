@@ -5,6 +5,8 @@ angular.module("sareeApp").directive("itemDisplayDirective", function($state, $s
     , templateUrl: "../directives/itemDisplayDirective.html"
     , scope: {
         items: "="
+        , searchTerm: "="
+        , category: "="
       }
     , link: function(scope, element, attributes) {
         scope.selectItem = function(element) {

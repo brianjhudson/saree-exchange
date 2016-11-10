@@ -5,7 +5,7 @@
         <form class="form-group">
           <input class="form-control" type="text" ng-model="searchTerm" placeholder="Search Inventory">
           <label class="sr-only" for="gender">Select Category</label><br>
-          <select class="form-control" id="gender" ng-model="filterObject.category">
+          <select class="form-control" id="gender" ng-model="category">
             <option value="">--Select Category--</option>
             <option value="women" selected>Women</option>
             <option value="men">Men</option>
@@ -14,7 +14,11 @@
         </form>
       </header>
       <ui-view>
-        <item-display-directive items="inventory"></item-display-directive>
+        <item-display-directive 
+            items="inventory" 
+            searchTerm="searchTerm" 
+            category="category">
+        </item-display-directive>
       </ui-view>
 
     </section>

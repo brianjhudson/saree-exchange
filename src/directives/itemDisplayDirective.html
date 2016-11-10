@@ -1,6 +1,6 @@
 <div class="container">
   <div class="col-sm-9">
-    <div ng-click="selectItem(item)" class="col-xs-4 col-sm-4 col-md-3 col-lg-2" ng-repeat="item in items | filter: filterObject | filter: searchTerm">
+    <div ng-click="selectItem(item)" class="col-xs-4 col-sm-4 col-md-3 col-lg-2" ng-repeat="item in items | filter: category | filter: searchTerm">
       <img class="browse-image" ng-src="{{item.url}}" alt="{{item.description}}">
       <p>{{item.title}}</p>
     </div>
